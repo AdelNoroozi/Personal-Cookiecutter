@@ -1,5 +1,5 @@
 from django.db import models
-from pizzami.common.models import BaseModel
+from {{cookiecutter.project_slug}}.common.models import BaseModel
 
 from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import BaseUserManager as BUM
