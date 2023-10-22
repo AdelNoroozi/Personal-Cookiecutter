@@ -18,8 +18,8 @@ if jwt == "n":
     delete_resource(f"{project_slug}/authentication/")
     delete_resource(f"{project_slug}/users/")
 
-def fix_line_endings():
-    sh_file = os.path.join('docker/', 'your_script.sh')
+def fix_line_endings(file_name):
+    sh_file = os.path.join('docker/', file_name)
 
     with open(sh_file, 'r', newline='\n') as file:
         script_contents = file.read()
@@ -27,4 +27,5 @@ def fix_line_endings():
     with open(sh_file, 'w', newline='\n') as file:
         file.write(script_contents)
 
-fix_line_endings()
+fix_line_endings("local_web_entrypoint.sh")
+fix_line_endings("production_web_entrypoint.sh")
