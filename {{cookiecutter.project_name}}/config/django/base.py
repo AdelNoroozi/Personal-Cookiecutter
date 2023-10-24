@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 DATABASES = {
-    'default': env.db('DATABASE_URL', default='psql://{{cookiecutter.postgres_user}}:{{cookiecutter.postgres_password}}@127.0.0.1:5432/{{cookiecutter.project_slug}}'),
+    'default': env.db('DATABASE_URL', default='psql://{{cookiecutter.postgres_user}}:{{cookiecutter.postgres_password}}@127.0.0.1:5433/{{cookiecutter.project_slug}}'),
 }
 
 if os.environ.get('GITHUB_WORKFLOW'):
@@ -98,7 +98,7 @@ if os.environ.get('GITHUB_WORKFLOW'):
             'USER': '{{cookiecutter.postgres_user}}',
             'PASSWORD': '{{cookiecutter.postgres_password}}',
             'HOST': 'db',
-            'PORT': '5432',
+            'PORT': '5433',
         }
     }
 
