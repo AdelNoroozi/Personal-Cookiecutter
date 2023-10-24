@@ -27,5 +27,4 @@ def fix_line_endings(file_name):
     with open(sh_file, 'w', newline='\n') as file:
         file.write(script_contents)
 
-fix_line_endings("local_web_entrypoint.sh")
 fix_line_endings("production_web_entrypoint.sh")
