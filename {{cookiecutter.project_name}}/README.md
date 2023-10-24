@@ -1,4 +1,4 @@
-# Pizzami
+# {{cookiecutter.project_name}}
 
 ## project development setup
 
