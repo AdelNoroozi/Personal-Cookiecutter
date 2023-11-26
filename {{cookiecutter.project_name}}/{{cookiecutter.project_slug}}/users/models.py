@@ -20,8 +20,16 @@ class BaseUser(TimeStampedBaseModel, AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
+    @property
     def is_staff(self):
         return self.is_admin
+
+    class Meta:
+        verbose_name = _("User")
+        verbose_name_plural = _("Users")
+        indexes = [
+            models.Index(fields=["email"])
+        ]
 
 
 class Profile(models.Model):
